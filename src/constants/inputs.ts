@@ -1,14 +1,15 @@
 interface Inputs {
-  [key: string]: string | boolean;
+  [key: string]: string | boolean | undefined;
   id: string;
   name: string;
   type: string;
   placeholder: string;
   errorMessage: string;
   required: boolean;
+  pattern?: string;
 }
 
-export const inputs: Inputs[] = [
+const inputs: Inputs[] = [
   {
     id: 'email',
     name: 'email',
@@ -27,3 +28,6 @@ export const inputs: Inputs[] = [
     required: true,
   },
 ];
+
+export { inputs };
+export type { Inputs };

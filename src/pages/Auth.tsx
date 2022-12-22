@@ -1,5 +1,9 @@
-import React from 'react';
+import SignForm from '../components/SignForm';
 
 export default function Auth() {
-  return <div>Auth</div>;
+  return (
+    <div>
+      <SignForm />
+    </div>
+  );
 }
