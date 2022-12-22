@@ -8,3 +8,7 @@ export interface Valid {
   email: boolean;
   password: boolean;
 }
+
+export interface Error {
+  response: { data: { message: string } };
+}
