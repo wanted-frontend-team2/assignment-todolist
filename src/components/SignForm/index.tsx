@@ -12,12 +12,14 @@ export default function SignForm() {
     changeFormMessage,
     handleChangeFormStatus,
     nextSignFormTitle,
+    isButtonDisabled,
   } = useAuth();
 
   return (
     <main>
       <form onSubmit={handleSubmit}>
         <h1>{currentSignFormTitle}</h1>
+
         {inputs.map(input => (
           <SignInput
             key={input.id}
@@ -29,7 +31,9 @@ export default function SignForm() {
           />
         ))}
 
-        <button type="submit">{currentSignFormTitle}</button>
+        <button disabled={isButtonDisabled} type="submit">
+          {currentSignFormTitle}
+        </button>
       </form>
       <div>
         <p>{changeFormMessage}</p>
