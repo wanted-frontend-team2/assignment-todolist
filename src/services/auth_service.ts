@@ -1,24 +1,13 @@
 import axiosRequest from './request';
+import { UserValues } from '../types/Auth';
 
-export interface ContentsProps {
-  email: string;
-  password: string;
-}
-
-export const register = async (contents: ContentsProps) => {
-  try {
-    const res = await axiosRequest.post('/auth/signup', contents);
-    return res;
-  } catch (err) {
-    throw new Error(`API 응답에 실패했습니다.${err}`);
-  }
+const signRequest = async (endpoint: string, userValues: UserValues) => {
+  const { email, password } = userValues;
+  const res = await axiosRequest.post(`/auth/${endpoint}`, {
+    email,
+    password,
+  });
+  return res.data;
 };
 
-export const signIn = async (contents: ContentsProps) => {
-  try {
-    const res = await axiosRequest.post(`/auth/signin`, contents);
-    return res;
-  } catch (err) {
-    throw new Error(`API 응답에 실패했습니다.${err}`);
-  }
-};
+export default signRequest;
