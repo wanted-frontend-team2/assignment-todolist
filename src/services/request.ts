@@ -17,9 +17,10 @@ axiosRequest.interceptors.request.use(
 
     try {
       if (storageToken) {
-        config.headers!.Authorization = `Bearer ${storageToken}`;
+        const conf = config;
+        conf.headers!.Authorization = `Bearer ${storageToken}`;
+        return conf;
       }
-      return config;
     } catch (err) {
       console.error(`[_axios.interceptors.request] config : ${err}`);
     }
