@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useEffect, useRef } from 'react';
 
 import useBoolean from 'src/hooks/useBoolean';
@@ -29,8 +27,9 @@ function TodoItem({ todoData, mutateUpdate, mutateDelete }: Props) {
       return;
     }
     mutateUpdate(id, { todo: value, isCompleted });
-    toggle();
   };
+  const onClickUpdateIsCompleted = () =>
+    mutateUpdate(id, { todo: value, isCompleted: !isCompleted });
 
   useEffect(() => {
     if (inputRef.current) {
@@ -38,14 +37,16 @@ function TodoItem({ todoData, mutateUpdate, mutateDelete }: Props) {
     }
   }, [isUpdate]);
 
+  useEffect(() => {
+    toggle();
+  }, [todo]);
+
   return (
     <li>
       <div>
         <label
           htmlFor={`checkbox${id}`}
-          onClick={() => {
-            mutateUpdate(id, { todo: value, isCompleted: !isCompleted });
-          }}
+          onChange={!isUpdate ? onClickUpdateIsCompleted : () => {}}
         >
           {isUpdate ? (
             <input
@@ -55,12 +56,13 @@ function TodoItem({ todoData, mutateUpdate, mutateDelete }: Props) {
               onChange={onChange}
             />
           ) : (
-            <span>{value}</span>
+            <span>{todo}</span>
           )}
           <input
             type="checkbox"
             id={`checkbox${id}`}
-            defaultChecked={isCompleted}
+            checked={isCompleted}
+            onChange={!isUpdate ? () => {} : onClickUpdateIsCompleted}
           />
         </label>
       </div>

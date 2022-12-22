@@ -18,7 +18,6 @@ const useTodo = () => {
       const response = await getTodoList();
       setTodos(response);
     } catch (err) {
-      alert('불러오기 실패');
       console.error(err);
     }
   };

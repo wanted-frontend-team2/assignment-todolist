@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { FormEvent } from 'react';
 
 import useValue from 'src/hooks/useValue';
@@ -22,15 +21,16 @@ function TodoForm({ mutateAdd }: Props) {
   return (
     <form className={styles.formBox} onSubmit={onSubmit}>
       <div className={styles.input}>
-        <label htmlFor="title" />
-        <input
-          id="title"
-          type="text"
-          value={value}
-          onChange={onChange}
-          // placeholder={isUpdate ? '할일을 수정하세요.' : '할일을 입력하세요.'}
-          placeholder="할일을 입력하세요."
-        />
+        <label htmlFor="title">
+          <input
+            id="title"
+            type="text"
+            value={value}
+            onChange={onChange}
+            // placeholder={isUpdate ? '할일을 수정하세요.' : '할일을 입력하세요.'}
+            placeholder="할일을 입력하세요."
+          />
+        </label>
       </div>
       <div className={styles.createBtn}>
         <button type="submit">
