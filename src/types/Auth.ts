@@ -3,3 +3,8 @@ export interface UserValues {
   email: string;
   password: string;
 }
+export interface Valid {
+  [key: string]: boolean;
+  email: boolean;
+  password: boolean;
+}

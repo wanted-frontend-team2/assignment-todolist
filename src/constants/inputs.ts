@@ -6,7 +6,7 @@ interface Inputs {
   placeholder: string;
   errorMessage: string;
   required: boolean;
-  pattern?: string;
+  pattern?: string | undefined;
 }
 
 const inputs: Inputs[] = [
