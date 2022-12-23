@@ -1,7 +1,7 @@
 import axios from 'axios';
 import API from '../config/api';
 
-const ACCESS_TOKEN_KEY = 'accessToken';
+export const ACCESS_TOKEN_KEY = 'token';
 
 const axiosRequest = axios.create({
   baseURL: API,

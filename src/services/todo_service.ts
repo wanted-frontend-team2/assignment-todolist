@@ -1,7 +1,8 @@
 import axiosRequest from './request';
 
-interface TodoProps {
+export interface TodoProps {
   todo: string;
+  isCompleted: boolean;
 }
 
 export const getTodoList = async () => {
@@ -16,7 +17,7 @@ export const getTodoList = async () => {
   }
 };
 
-export const addTodo = async (content: TodoProps) => {
+export const addTodo = async (content: Pick<TodoProps, 'todo'>) => {
   try {
     const res = await axiosRequest.post(`/todos`, content);
     if (res) {
