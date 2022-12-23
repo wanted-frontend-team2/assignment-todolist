@@ -18,7 +18,7 @@ interface Props {
 function TodoItem({ todoData, mutateUpdate, mutateDelete }: Props) {
   const { id, todo, isCompleted } = todoData;
   const { value, onChange, reset } = useValue(todo);
-  const { isBoolean: isUpdate, toggle } = useBoolean();
+  const { isBoolean: isUpdate, toggle } = useBoolean(true);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const onClickCancle = () => {
