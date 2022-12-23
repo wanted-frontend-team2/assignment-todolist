@@ -28,6 +28,10 @@ const useAuth = () => {
   const handleChangeFormStatus = () => {
     setSignFormStatus(signFormStatus === 'signin' ? 'signup' : 'signin');
     setUserValues({ email: '', password: '' });
+    setIsValid({
+      email: false,
+      password: false,
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
