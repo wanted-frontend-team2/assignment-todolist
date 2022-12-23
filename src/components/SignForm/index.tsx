@@ -1,6 +1,7 @@
 import SignInput from '../SignInput';
 import { inputs } from '../../constants/inputs';
 import useAuth from '../../hooks/useAuth';
+import * as S from './index.style';
 
 export default function SignForm() {
   const {
@@ -16,10 +17,9 @@ export default function SignForm() {
   } = useAuth();
 
   return (
-    <main>
+    <S.Main>
+      <S.Title>{currentSignFormTitle}</S.Title>
       <form onSubmit={handleSubmit}>
-        <h1>{currentSignFormTitle}</h1>
-
         {inputs.map(input => (
           <SignInput
             key={input.id}
@@ -30,19 +30,20 @@ export default function SignForm() {
             {...input}
           />
         ))}
-
-        <button disabled={isButtonDisabled} type="submit">
-          {currentSignFormTitle}
-        </button>
+        <S.Button>
+          <button disabled={isButtonDisabled} type="submit">
+            {currentSignFormTitle}
+          </button>
+        </S.Button>
       </form>
       <div>
-        <p>{changeFormMessage}</p>
-
-        {/* 로그인 회원가입 전환 버튼 (버튼 스타일 제거 필요) */}
-        <button type="button" onClick={handleChangeFormStatus}>
-          {nextSignFormTitle}
-        </button>
+        <S.InfoMsg>
+          <p>{changeFormMessage}</p>
+          <button type="button" onClick={handleChangeFormStatus}>
+            {nextSignFormTitle}
+          </button>
+        </S.InfoMsg>
       </div>
-    </main>
+    </S.Main>
   );
 }

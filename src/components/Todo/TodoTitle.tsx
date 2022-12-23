@@ -1,5 +1,6 @@
 import useLogout from 'src/hooks/useLogout';
 import { ITodo } from 'src/types/Todo';
+import * as S from './index.style';
 
 interface Props {
   todos: ITodo[];
@@ -10,12 +11,12 @@ function TodoTitle({ todos }: Props) {
   const completedNum = todos.filter(todo => todo.isCompleted).length;
 
   return (
-    <div>
+    <S.Title>
       <h1>TODO`s TASKS ({completedNum})</h1>
       <button type="button" onClick={logout}>
-        logout
+        LOGOUT
       </button>
-    </div>
+    </S.Title>
   );
 }
 

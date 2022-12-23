@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { BsCheckCircleFill } from 'react-icons/bs';
+import * as S from './index.style';
 
 interface Props {
   id: string;
@@ -22,6 +23,7 @@ export default function SignInput(props: Props) {
     isValid,
     ...inputProps
   } = props;
+
   const [focused, setFocused] = useState(false);
 
   const handleFocus = (): void => {
@@ -32,9 +34,9 @@ export default function SignInput(props: Props) {
 
   return (
     <div>
-      <label htmlFor={id}>
-        <h1>{title}</h1>
-        <input
+      <S.InputBox>
+        <S.Label htmlFor={id}>{title}</S.Label>
+        <S.Input
           name={name}
           id={id}
           onChange={onChange}
@@ -46,9 +48,11 @@ export default function SignInput(props: Props) {
           pattern={pattern}
           {...inputProps}
         />
+      </S.InputBox>
+      <S.InputState>
         {isValid && <BsCheckCircleFill size={20} />}
-        {focused && !isValid && <span>{errorMessage}</span>}
-      </label>
+        {focused && !isValid && <S.ErrorMsg>{errorMessage}</S.ErrorMsg>}
+      </S.InputState>
     </div>
   );
 }

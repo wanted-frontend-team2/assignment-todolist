@@ -4,6 +4,10 @@ import useBoolean from 'src/hooks/useBoolean';
 import useValue from 'src/hooks/useValue';
 import { TodoProps } from 'src/services/todo_service';
 import { ITodo } from 'src/types/Todo';
+import { RiDeleteBinLine } from 'react-icons/ri';
+import { TfiPencil } from 'react-icons/tfi';
+import { MdOutlineCancel, MdOutlineCheckCircle } from 'react-icons/md';
+import * as S from './index.style';
 
 interface Props {
   todoData: ITodo;
@@ -42,12 +46,18 @@ function TodoItem({ todoData, mutateUpdate, mutateDelete }: Props) {
   }, [todo]);
 
   return (
-    <li>
+    <S.List>
       <div>
         <label
           htmlFor={`checkbox${id}`}
           onChange={!isUpdate ? onClickUpdateIsCompleted : () => {}}
         >
+          <input
+            type="checkbox"
+            id={`checkbox${id}`}
+            checked={isCompleted}
+            onChange={!isUpdate ? () => {} : onClickUpdateIsCompleted}
+          />
           {isUpdate ? (
             <input
               ref={inputRef}
@@ -58,36 +68,30 @@ function TodoItem({ todoData, mutateUpdate, mutateDelete }: Props) {
           ) : (
             <span>{todo}</span>
           )}
-          <input
-            type="checkbox"
-            id={`checkbox${id}`}
-            checked={isCompleted}
-            onChange={!isUpdate ? () => {} : onClickUpdateIsCompleted}
-          />
         </label>
       </div>
-      <div>
+      <S.ListBtn>
         {!isUpdate ? (
           <>
             <button type="button" onClick={toggle}>
-              펜슬
+              <TfiPencil />
             </button>
             <button type="submit" onClick={() => mutateDelete(id)}>
-              휴지통
+              <RiDeleteBinLine />
             </button>
           </>
         ) : (
           <>
             <button type="submit" onClick={onClickUpdate}>
-              제출
+              <MdOutlineCheckCircle />
             </button>
             <button type="button" onClick={onClickCancle}>
-              취소
+              <MdOutlineCancel />
             </button>
           </>
         )}
-      </div>
-    </li>
+      </S.ListBtn>
+    </S.List>
   );
 }
 
