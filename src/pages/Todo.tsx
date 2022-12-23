@@ -1,7 +1,5 @@
 import TodoLayout from 'src/components/Todo/TodoLayout';
 
-function Todo() {
+export default function Todo() {
   return <TodoLayout />;
 }
-
-export default Todo;

@@ -8,7 +8,7 @@ function TodoLayout() {
   const { todos, mutateAdd, mutateUpdate, mutateDelete } = useTodo();
 
   return (
-    <div>
+    <main>
       <TodoTitle todos={todos} />
       <TodoList
         todos={todos}
@@ -16,7 +16,7 @@ function TodoLayout() {
         mutateDelete={mutateDelete}
       />
       <TodoForm mutateAdd={mutateAdd} />
-    </div>
+    </main>
   );
 }
 

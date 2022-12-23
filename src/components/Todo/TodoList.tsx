@@ -1,6 +1,7 @@
 import { TodoProps } from 'src/services/todo_service';
 import { ITodo } from 'src/types/Todo';
 import TodoItem from './TodoItem';
+import * as S from './index.style';
 
 interface Props {
   todos: ITodo[];
@@ -10,7 +11,7 @@ interface Props {
 
 function TodoList({ todos, mutateUpdate, mutateDelete }: Props) {
   return todos.length ? (
-    <ul>
+    <S.ListBox>
       {todos.map(todo => (
         <TodoItem
           key={todo.id}
@@ -19,9 +20,9 @@ function TodoList({ todos, mutateUpdate, mutateDelete }: Props) {
           mutateDelete={mutateDelete}
         />
       ))}
-    </ul>
+    </S.ListBox>
   ) : (
-    <p>저장된 할일이 없습니다.</p>
+    <S.ListNone>저장된 할일이 없습니다.</S.ListNone>
   );
 }
 

@@ -1,13 +1,102 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-family: 'Noto Sans KR', helvetica, 'malgun gothic', 'Apple SD Gothic Neo',
+    'Microsoft NeoGothic', 'Droid sans', sans-serif;
+  font-weight: normal;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+  color: #222;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input,
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+select,
+input,
+textarea {
+  font-size: 16px;
+}
+
+input::-webkit-contacts-auto-fill-button {
+  position: absolute;
+  right: 0;
+  display: none !important;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+input {
+  background-color: transparent;
+  background-image: none !important;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input:is([type='button'], [type='submit'], [type='reset']),
+input[type='file']::file-selector-button,
+button {
+  color: initial;
+}
+
+.App {
+  background: #d9dff8;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  padding: 40px;
+  margin: 50px;
+  width: 500px;
+  min-width: 400px;
+  height: 75vh;
+  border-radius: 20px;
+  background: #f9faff;
+  box-shadow: 5px 4px 3px 3px #d7dcf8;
 }
