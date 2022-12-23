@@ -2,7 +2,7 @@
 
 > 로그인만으로 간단하게 투두리스트를 작성하고 수정할 수 있는 프로젝트입니다.
 
-[서비스 바로가기](https://web-wanted-frontend-team2-todolist-20z52flc0k1c1p.gksl2.cloudtype.app, "Todo App")
+[서비스 바로가기](https://web-wanted-frontend-team2-todolist-20z52flc0k1c1p.gksl2.cloudtype.app/, "Todo App")
 
 <br>
 
