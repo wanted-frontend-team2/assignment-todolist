@@ -43,10 +43,12 @@ const useAuth = () => {
       localStorage.setItem('token', token);
 
       if (signFormStatus === 'signin') {
+        // eslint-disable-next-line no-alert
         alert(`환영합니다 ${userId}님`);
         navigate('/todo');
       }
       if (signFormStatus === 'signup') {
+        // eslint-disable-next-line no-alert
         alert('회원가입이 완료되었습니다');
         handleChangeFormStatus();
       }
@@ -54,7 +56,9 @@ const useAuth = () => {
       const error = err as Error;
       const errorMessage = error.response.data.message;
       if (errorMessage === 'Unauthorized')
+        // eslint-disable-next-line no-alert
         alert('아이디와 비밀번호를 확인해주세요');
+      // eslint-disable-next-line no-alert
       else alert(errorMessage);
     }
   };

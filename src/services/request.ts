@@ -18,10 +18,12 @@ axiosRequest.interceptors.request.use(
     try {
       if (storageToken) {
         const conf = config;
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         conf.headers!.Authorization = `Bearer ${storageToken}`;
         return conf;
       }
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.error(`[_axios.interceptors.request] config : ${err}`);
     }
     return config;

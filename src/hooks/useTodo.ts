@@ -18,6 +18,7 @@ const useTodo = () => {
       const response = await getTodoList();
       setTodos(response);
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.error(err);
     }
   };
@@ -32,6 +33,7 @@ const useTodo = () => {
       const response = await addTodo({ todo: payload });
       setTodos(pre => [...pre, response.data]);
     } catch (err) {
+      // eslint-disable-next-line no-alert
       alert('작성 실패');
     }
   };
@@ -45,6 +47,7 @@ const useTodo = () => {
       newTodos[todoIndex] = response.data;
       setTodos(newTodos);
     } catch (err) {
+      // eslint-disable-next-line no-alert
       alert('수정 실패');
     }
   };
@@ -55,6 +58,7 @@ const useTodo = () => {
       const newTodos = todos.filter(todo => todo.id !== id);
       setTodos(newTodos);
     } catch (err) {
+      // eslint-disable-next-line no-alert
       alert('삭제 실패');
     }
   };
