@@ -2,7 +2,7 @@
 
 > 로그인만으로 간단하게 투두리스트를 작성하고 수정할 수 있는 프로젝트입니다.
 
-[서비스 바로가기](https://web-wanted-frontend-team2-todolist-20z52flc0k1c1p.gksl2.cloudtype.app/, "Todo App")
+[서비스 바로가기](https://web-assignment-todolist-ll32glc0mupr1.gksl2.cloudtype.app/, "Todo App")
 
 <br>
 
@@ -59,7 +59,7 @@
 - 삭제 아이콘을 누르면 항목이 삭제됩니다.
 - 삭제 후 리스트를 다시 불러오기 위한 요청을 보내지 않고 낙관적 업데이트를 합니다.
 
-<br><Br>
+<br>
 
 ### 기타 고려한 항목
 - 페이지 컴포넌트는 비즈니스 로직 없이 해당 페이지의 컴포넌트들을 모아 렌더링 해주는 역할만 하도록 했습니다.
@@ -69,6 +69,7 @@
   - try-catch 구문으로 에러를 핸들링하고 에러 발생 시 사용자에게 알립니다.
   - 유연한 에러 처리를 위해 axios를 사용했습니다.
   - 가독성을 위해 async-await 구문을 사용했습니다.
+- 오류를 컴파일 단계에서 처리하기 위해 TypeScript를 사용했습니다.
 
 <Br><Br>
 
@@ -88,16 +89,18 @@ npm run start
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://github.com/DongWooKim97"><img src="https://avatars.githubusercontent.com/u/66302122?v=4" width="100px;" alt="김동우 프로필"/><br /><sub><b>김동우</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/trondi"><img src="https://avatars.githubusercontent.com/u/42338190?v=4" width="100px;" alt="김수경 프로필"/><br /><sub><b>김수경</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/Elenapark"><img src="https://avatars.githubusercontent.com/u/60565155?v=4" width="100px;" alt="박성은 프로필"/><br /><sub><b>박성은</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/Iandayy"><img src="https://avatars.githubusercontent.com/u/104152583?v=4" width="100px;" alt="박수연 프로필"/><br /><sub><b>박수연</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/ahn0min"><img src="https://avatars.githubusercontent.com/u/89904226?v=4" width="100px;" alt="안영민 프로필"/><br /><sub><b>안영민</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/DongWooKim97"><img src="https://avatars.githubusercontent.com/u/66302122?v=4" width="100px;" alt="김동우 프로필"/><br /><sub><b>김동우</b></sub></a><br />팀원<br /></td>
+      <td align="center"><a href="https://github.com/trondi"><img src="https://avatars.githubusercontent.com/u/42338190?v=4" width="100px;" alt="김수경 프로필"/><br /><sub><b>김수경</b></sub></a><br />팀원<br /></td>
+      <td align="center"><a href="https://github.com/Elenapark"><img src="https://avatars.githubusercontent.com/u/60565155?v=4" width="100px;" alt="박성은 프로필"/><br /><sub><b>박성은</b></sub></a><br />팀원<br /></td>
+      <td align="center"><a href="https://github.com/Iandayy"><img src="https://avatars.githubusercontent.com/u/104152583?v=4" width="100px;" alt="박수연 프로필"/><br /><sub><b>박수연</b></sub></a><br />팀원<br /></td>
+      <td align="center"><a href="https://github.com/ahn0min"><img src="https://avatars.githubusercontent.com/u/89904226?v=4" width="100px;" alt="안영민 프로필"/><br /><sub><b>안영민</b></sub></a><br />팀원<br /></td>
      <tr/>
-      <td align="center"><a href="https://github.com/heony704"><img src="https://avatars.githubusercontent.com/u/36994104?v=4" width="100px;" alt="이승헌 프로필"/><br /><sub><b>이승헌</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/Jooseulgi"><img src="https://avatars.githubusercontent.com/u/54945205?v=4" width="100px;" alt="주슬기 프로필"/><br /><sub><b>주슬기</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/dukjjang"><img src="https://avatars.githubusercontent.com/u/102455275?v=4" width="100px;" alt="진현덕 프로필"/><br /><sub><b>진현덕</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/cofla159"><img src="https://avatars.githubusercontent.com/u/70076564?v=4" width="100px;" alt="황채림 프로필"/><br /><sub><b>황채림</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/heony704"><img src="https://avatars.githubusercontent.com/u/36994104?v=4" width="100px;" alt="이승헌 프로필"/><br /><sub><b>이승헌</b></sub></a><br />팀원<br /></td>
+      <td align="center"><a href="https://github.com/Jooseulgi"><img src="https://avatars.githubusercontent.com/u/54945205?v=4" width="100px;" alt="주슬기 프로필"/><br /><sub><b>주슬기</b></sub></a><br />팀원<br /></td>
+      <td align="center"><a href="https://github.com/dukjjang"><img src="https://avatars.githubusercontent.com/u/102455275?v=4" width="100px;" alt="진현덕 프로필"/><br /><sub><b>진현덕</b></sub></a><br />팀원<br /></td>
+      <td align="center"><a href="https://github.com/cofla159"><img src="https://avatars.githubusercontent.com/u/70076564?v=4" width="100px;" alt="황채림 프로필"/><br /><sub><b>황채림</b></sub></a><br />팀장<br /></td>
     </tr>
   </tbody>
 </table>
+
+>[회의록](https://wanted-preonboarding.notion.site/12-22-cf5652df5ef54f91bf22b4d1110e24fe)
