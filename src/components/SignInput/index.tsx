@@ -51,7 +51,9 @@ export default function SignInput(props: Props) {
       </S.InputBox>
       <S.InputState>
         {isValid && <BsCheckCircleFill size={20} />}
-        {focused && !isValid && <S.ErrorMsg>{errorMessage}</S.ErrorMsg>}
+        {focused && !isValid && value.length !== 0 && (
+          <S.ErrorMsg>{errorMessage}</S.ErrorMsg>
+        )}
       </S.InputState>
     </div>
   );

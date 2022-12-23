@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-named-as-default
 import SignInput from '../SignInput';
 import { inputs } from '../../constants/inputs';
 import useAuth from '../../hooks/useAuth';
