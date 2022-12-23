@@ -63,6 +63,9 @@ export const List = styled.li`
         }
       }
     }
+    input[type='text'] {
+      width: 305px;
+    }
   }
 `;
 

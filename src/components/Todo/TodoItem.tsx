@@ -60,6 +60,7 @@ function TodoItem({ todoData, mutateUpdate, mutateDelete }: Props) {
           />
           {isUpdate ? (
             <input
+              type="text"
               ref={inputRef}
               name="todo"
               value={value}
