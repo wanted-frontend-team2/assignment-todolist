@@ -1,4 +1,4 @@
-interface Inputs {
+interface Input {
   [key: string]: string | boolean | undefined;
   id: string;
   name: string;
@@ -9,7 +9,7 @@ interface Inputs {
   pattern?: string | undefined;
 }
 
-const inputs: Inputs[] = [
+const inputs: Input[] = [
   {
     id: 'email',
     name: 'email',
@@ -30,4 +30,4 @@ const inputs: Inputs[] = [
 ];
 
 export { inputs };
-export type { Inputs };
+export type { Input };
